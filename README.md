@@ -4,4 +4,4 @@ Simple `tig` viewer in `vim`
 
 ## Usage
 
-`:Tig' -> Open tig
+`:Tig` -> Open `tig`
