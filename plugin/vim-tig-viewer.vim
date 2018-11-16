@@ -1,14 +1,21 @@
 if has('nvim')
-  function! s:tig()
-    let current = expand('%')
-
+  function! s:tig(...)
     function! s:tigopen()
       call termopen('tig')
     endfunction
 
-    call s:tigopen()
+    function! s:tigopencommit(commit)
+      call termopen('tig' . ' ' . a:commit)
+    endfunction
+
+    if a:0 > 0
+      call s:tigopencommit(a:1)
+    else
+      call s:tigopen()
+    endif
+
     startinsert
   endfunction
 
-  command! Tig call s:tig()
+  command! -nargs=? Tig call s:tig(<f-args>)
 endif
