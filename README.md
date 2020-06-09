@@ -2,7 +2,7 @@
 
 Simple `tig` viewer in `vim`
 
-Use terminal in nvim.
+Use terminal in vim or nvim.
 
 ## Usage
 
